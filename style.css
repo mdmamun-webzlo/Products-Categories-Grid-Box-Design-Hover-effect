@@ -1,0 +1,51 @@
+.wd-post,
+.category-grid-item,
+.wd-product{
+	
+    background: #fff;
+    position: relative;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.1));
+}
+.wd-post, .wd-product{
+		padding-bottom: 20px !important;
+   
+}
+.wd-post::before,
+.category-grid-item::before,
+.wd-product::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    width: 0;
+    height: 8px;
+    background: #58B33E;
+    transition: width 0.5s ease;
+}
+
+.wd-post::after,
+.category-grid-item::after,
+.wd-product::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    width: 8px;
+    height: 0;
+    background: #58B33E;
+    transition: height 0.5s ease;
+}
+
+/* Hover animation */
+.wd-post:hover::before,
+.category-grid-item:hover::before,
+.wd-product:hover::before {
+    width: 18%;
+}
+
+.wd-post:hover::after,
+.category-grid-item:hover::after,
+.wd-product:hover::after {
+    height: 18%;
+}
